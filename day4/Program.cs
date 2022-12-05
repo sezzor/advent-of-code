@@ -55,12 +55,12 @@ foreach (var pair in textArray)
     int e2Start = int.Parse(elfs[1].Split("-")[0]);
     int e2End = int.Parse(elfs[1].Split("-")[1]);
 
-    bool overlap = CompareRages(e1Start, e1End, e2Start, e2End);
+    bool overlap = CompareRanges(e1Start, e1End, e2Start, e2End);
     if (overlap) sum += 1;
 }
 Console.WriteLine(sum);
 
-bool CompareRages(int r1s, int r1e, int r2s, int r2e)
+bool CompareRanges(int r1s, int r1e, int r2s, int r2e)
 {
     bool overlaps = false;
     List<int> elf1 = Enumerable.Range(r1s, r1e - r1s + 1).ToList();
