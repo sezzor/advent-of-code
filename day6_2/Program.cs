@@ -1,9 +1,9 @@
 ﻿string input = File.ReadAllText("input.txt");
 string marker = "";
 
-for (int i = 0; i < input.Count() - 4; i++)
+for (int i = 0; i < input.Count() - 14; i++)
 {
-    string sequence = input.Substring(i, 4);
+    string sequence = input.Substring(i, 14);
     int uniqueLetters = 0;
     foreach (var letter in sequence)
     {
@@ -11,12 +11,12 @@ for (int i = 0; i < input.Count() - 4; i++)
             uniqueLetters++;
 
     }
-    if (uniqueLetters == 4)
+    if (uniqueLetters == 14)
     {
         marker = sequence;
         Console.WriteLine(marker);
         break;
     }
 }
-int pos = input.IndexOf(marker) + 4;
+int pos = input.IndexOf(marker) + 14;
 Console.WriteLine(pos);
