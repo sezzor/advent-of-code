@@ -4,10 +4,8 @@ class Program
     static void Main(string[] args)
     {
         string text = File.ReadAllText("input.txt");
-        // System.Console.WriteLine(text);
         string[] textArray = text.Split('\n');
 
-        // int[] sums = { };
         List<int> sums = new List<int> { };
         int sum = 0;
         foreach (var row in textArray)
@@ -25,14 +23,8 @@ class Program
                 else throw new Exception("Error oh no!");
             }
         }
-        System.Console.WriteLine(sums.Max());
+        Console.WriteLine("Part 1: " + sums.Max());
         sums = sums.OrderByDescending(x => x).ToList();
-        System.Console.WriteLine(sums[0] + sums[1] + sums[2]);
-
-        // foreach (var val in sums)
-        // {
-        //     System.Console.WriteLine($"{val}");
-        // }
-
+        Console.WriteLine("Part 2: " + (sums[0] + sums[1] + sums[2]));
     }
 }
