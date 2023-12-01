@@ -1,4 +1,4 @@
-﻿
+﻿Console.WriteLine("Hello World");
 
 // string text = File.ReadAllText("input.txt");
 // string[] textArray = text.Split('\n');
